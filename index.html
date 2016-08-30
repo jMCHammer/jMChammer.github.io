@@ -7,6 +7,7 @@
     <meta name="description" content="John Carey: My website hosted using Github Pages.">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.js"></script>
 
     <title>John Carey</title>
   </head>
@@ -30,6 +31,51 @@
         <h3><a id="about-me" class="anchor" href="#about-me" aria-hidden="true"><span aria-hidden="true" class="oticon oticon-link"></span></a>About Me</h3>
 <p>Software Engineer located near Philadelphia, PA. I graduated from the University of Delaware in 2014 with a B.S. in Computer Science and a minor in Mathematics. I'm working as a Software Developer at Elsevier. My Expertise in J2EE, Java, Spring, Oracle technologies, and SQL.</p> 
 <p>I have work experience developing web-based applications using Java, Spring MVC, Jersey, MySQL, Oracle DB, JMS, and other J2EE technologies. Through personal projects and other experience, I have experience coding in JavaScript, HTML5, CSS, and Python.</p>
+<canvas id="skillsChart" width="400" height="200"></canvas>
+<script>
+var ctx = document.getElementById("skillsChart");
+var skillsChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Java", "JavaScript", "SQL", "Python", "HTML5"],
+        datasets: [{
+            label: 'Expertise in Languages',
+            data: [6, 5, 5, 4, 4],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+        <h3><a id="experience-section" class="anchor" href="#experience" aria-hidden="true"><span aria-hidden="true" class="oticon oticon-link"></span></a>Experience</h3>
+<p>
+  <h4>Software Engineer, Elsevier [March 2016, current]</h4>
+  <h4>Software Engineer, SEI Investments [July 2014, March 2016]</h4>
+  <h4>Application Developer Intern, JPMorgan Chase & Co. [July 2013, March 2014]</h4>
+  <h4>I.T. Staffing Intern, University of Delaware> [July 2012, March 2014]</h4>
+</p>
       </section>
     </div>
 
